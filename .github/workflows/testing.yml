@@ -225,12 +225,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Retrieve binaries
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: rgbds-canary-mingw-win${{ matrix.bits }}
           path: bins
       - name: Retrieve test binaries
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: testing-programs-mingw-win${{ matrix.bits }}
           path: test/gfx
